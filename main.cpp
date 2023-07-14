@@ -10,69 +10,50 @@
 #include <stack>
 #include <iomanip>
 
-
 using namespace std;
-//	I have defined all the funtion at the top because some functions call each other at the time of execution :)	//
-void fullscreen();				                        //	It makes the terminal full screen for better expeirence 		(design assistive function)
-void Date();					                        //	It display the date and time 									(design assistive function)
-void loading_screen();			                        //	It diplays the loading screen									(design assistive function)
-void welcome_art();				                        //	It display welcome when you open the program					(design assistive function)
-void art();						                        //	It displays the company name art at the top of the page 		(design assistive function)
-void exit_art();				                        //	It displays the thankyou art when you exit the portal 			(design assistive function)
-//  
-//void menu();					                        //	It opens the menu page 											(main control page)
-//void user();					                        //	It opens the user portal 										(menu control)
-//void add_new_student();		                        //	It adds new customer and opens the car selecting menu					(user exclusive control)
-//void student_login();  		                        //	It ask for id and opens the car selecting menu 							(user exclusive control) 
-//void display_Available_Car();	                        //	It display all the available cars in the inventory							(user exclusive assistive function) 
-//void password();				                        //	It reads and checks the admin password and opens admin portal	(menu control)
-//void admin_portal();			                        		//	It opens the admin portal 										(menu control)
-//void showcarData();			                        	//	It display all the cars (available and rented out ) 					(admin exclusive control)
-//void add_new_admin();			                        //	It adds new admins to the system										(admin exclusive control)
-//void add_new_car();			                        	//	It add the new cars to the inventory 									(admin exclusive control) 
-//void reset_available_car();	                        	//	It resets the available cars in the inventory							(admin exclusive control)
-//void delete_car();			                        	//	It deletes the car information from the inventory 						(admin exclusive control)
-//void display_car();			                        	//	It display all the cars (available and rented out )							(admin exclusive assistive function)
-//void rules_and_regulations();	                        	//	It diplays the terms and condition to the user 					(menu control) 
-//  
-//int student_count();			                        //	It count the no of customers saved in the system 				(assistive working function)
-//int book_count();				                        //	It count the no of cars in the inventory						(assistive working function)
-//int user_count();				                        //	It count the number of users present in the files 				(assistive working function)
-//int available_book_count();	                        	//	It count the number of available cars 							(assistive working function)
+//	I have defined all the funtion at the top because some functions call each other at the time of execution - ayush saklani ;)	//
+void fullscreen();								//	It makes the terminal full screen for better expeirence 	(design & aesthetic function)
+void Date();									//	It display the date and time 								(design & aesthetic function)
+string dateret();								//	It returns date and time in string format					(design & aesthetic function)
+void welcome_art();								//	It display welcome when you open the program				(design & aesthetic function)
+void exit_art();								//	It displays the thankyou art when you exit the portal 		(design & aesthetic function)
+void art();										//	It displays the company name art at the top of the page 	(design & aesthetic function)
+void loading_screen();							//	It diplays the loading screen								(design & aesthetic function)
 
-//add savedatabase to everyplace
-
-
-
-void menu();
-void student_corner();
-void student_login();
-void add_new_student ();
-void students_portal(int studentid,int i);
-void book_issue(int studentid,int i);
-void book_return(int studentid,int i);
-void admin_login();
-void admins_portal();
-void show_all_book();
-void add_book();
-void delete_book();
-void show_available_book();
-void show_issued_book();
-void show_all_student();
-void show_student_issued_book(int studentid);
-void reset_book();
-void add_new_admin();
-void rules_and_regulations();
-int book_count();
-int student_count();
-int admin_count();
-int issued_book_count();
-void read_students_details();
-void read_allbook ();
-void read_admins();
-void save_database();
-
-
+void menu();									//	It opens the menu page 										(main control landing page)
+//
+void student_corner();							//	It open the page for students to login and register 		(menu control)
+void student_login();							//	It open the page for registered student to login				(student protective control)
+void students_portal(int studentid,int i);		//	It open the student portal											(student menu)
+void book_issue(int studentid,int i);			//	It helps the students to issue any available book						(student exclusive control)
+void book_return(int studentid,int i);			//	It helps the students to return any available book						(student exclusive control)
+void show_student_issued_book(int studentid);	//	It display all the books issued by a particular student					(student exclusive control)
+void changepassword(int studentd,int i);		//	It changes password of the logged in student							(student exclusive control)
+void add_new_student ();						//	It open the page for new students to register 					(student protective control)
+//
+void admin_login();								//	It open the page for admins to login 						(menu control || admin protective control)	
+void admins_portal(int adminid,int i);			//	It open admin portal												(admin menu)
+void add_new_admin(int admindid);				//	It adds new admins to the system										(admin exclusive control || admin protective control) 		
+void show_all_book();							//	It display all the books in the system									(admin exclusive control)		
+void add_book(int adminid,int i);				//	It adds new books to the database										(admin exclusive control) 			
+void delete_book(int adminid,int j);			//	It deletes new books to the database									(admin exclusive control) 			
+void show_available_book();						//	It display all the available books available for issuing				(admin exclusive control)				
+void show_issued_book();						//	It display all the books currently issued to students					(admin exclusive control)		
+void show_all_student();						//	It display all the students registered to portal						(admin exclusive control)		
+void reset_book(int adminid,int i);				//	It resets all the availability of all books								(admin exclusive control)		
+void readlogs();								//	It display log history to the admin										(admin exclusive control)											
+//
+void rules_and_regulations();					//	It diplays the rules on how to handle college property		(menu control) 			
+//														
+int book_count();								//	It count the total no of books saved in the system 			(work assistive function)				
+int issued_book_count();						//	It count the total no of books issued from the system 		(work assistive function)				
+int student_count();							//	It count the total no of student registered in portal 		(work assistive function)				
+int admin_count();								//	It count the total no of admin controlling the system  		(work assistive function)				
+//
+void read_students_details();					//	It reads and stores data from database to local variable	(essential database function)
+void read_allbook ();							//	It reads and stores data from database to local variable	(essential database function)
+void read_admins();								//	It reads and stores data from database to local variable	(essential database function)
+void save_database();							//	It reads and stores data from local variables to database 	(essential database function)
 
 class bookc{
 	public:
@@ -114,6 +95,14 @@ void Date(){
     tstruct = *localtime(&now);
     strftime(buf, sizeof(buf), "\n\t  \t\t\t\t\t\tDATE: %d/%m/%Y TIME: %X", &tstruct);
     cout<< buf<<endl;
+}
+string dateret(){
+    time_t     now = time(0);
+    struct tm  tstruct;
+    char       buf[80];
+    tstruct = *localtime(&now);
+    strftime(buf, sizeof(buf), "DATE: %d/%m/%Y TIME: %X", &tstruct);
+    return buf ;
 }
 void welcome_art(){
 	ifstream ifs ("welcome.txt");    
@@ -157,9 +146,10 @@ void loading_screen(){
         cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n       \t\t\t\t\t\t\t\t\t loading ........"<<i<<"%";
         Sleep(40);
     }
-    cout<<"\n\t\t\t\t\t\tpress any key to continue........"<<endl;
-    cout<<"\t\t\t\t\t";
-    getch();	
+        Sleep(1000);
+    //cout<<"\n\t\t\t\t\t\tpress any key to continue........"<<endl;
+    //cout<<"\t\t\t\t\t";
+    //getch();	
 }
 
 void menu(){ 
@@ -202,6 +192,7 @@ void menu(){
 		menu();
 	}
 	else{
+		system("COLOR F4");//red
 		system("cls");
 		art();
 		cout<<"\n\n\n\n";
@@ -209,10 +200,13 @@ void menu(){
 		cout<<"\n\t  \t\t\t\t\t\t\t  Try Again.....";
 		Sleep(1000);
 		system("cls");
+		system("COLOR F0");//black
+		Sleep(500);
 		menu();
 	}
 	
 }
+
 void student_corner(){
 	int x;
 	art();
@@ -248,6 +242,8 @@ void student_login(){
 			cin>>temppassword;
 			//cout<<student[i].student_id<<"+"<<student[i].password<<"+"<<temppassword<<"+"<<endl;
 				if(strcmp(temppassword, student[i].password) == 0){
+					
+					system("COLOR F1");//blue
 					coutoo++;
 					system("cls");
 					art();
@@ -255,17 +251,24 @@ void student_login(){
 					cout<<"\n\t  \t\t\tWELCOME ";
 					cout << student[i].name;
 					cout<<"\t  \tStudent ID : ";
-					cout << student[i].student_id;
-					cout<<"\t  \t\t\tRedirecting to student's portal.."<<endl<<endl;
+					cout << student[i].student_id<<endl;
+					cout<<"\n\t  \t\t\tRedirecting to student's portal.."<<endl<<endl;
     				cout<<"\t  \t\t\t"<<endl;
 					Sleep(1000);
     				cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
     				cout<<"\t  \t\t\t";
+						ofstream log;
+						log.open("logfile.txt",ios::app);
+						log<<dateret()<<"\t"<<student[i].name<<" logged in to the system 	Student ID : "<<student[i].student_id<<endl;
+						log.close();
     				getch();
 					system("cls");
+					system("COLOR F0");//black
+					Sleep(500);
     				students_portal(student[i].student_id,i);
 				}
-				else{
+				else{					
+					system("COLOR F4");//red
 					cout<<"\t  \t\t\tWrong Password.."<<endl<<endl;
 					cout<<"\t  \t\t\tReturning to student's portal.."<<endl<<endl;
     				cout<<"\t  \t\t\t"<<endl;
@@ -274,11 +277,14 @@ void student_login(){
     				cout<<"\t  \t\t\t";
     				getch();
 					system("cls");
+					system("COLOR F0");//black
+					Sleep(500);
     				student_corner();
 				}
 		}
 	}
 	if(coutoo==0){
+			system("COLOR F4");//red
 			cout<<endl;
     		cout<<"\t  \t\t\tUser not found ......"<<endl;
 			Sleep(500);
@@ -289,7 +295,332 @@ void student_login(){
     		cout<<"\t  \t\t\t";
     		getch();
 			system("cls");
+			system("COLOR F0");//black
+			Sleep(500);
     		student_corner();
+	}
+}
+void students_portal(int studentid,int i){
+	int x;
+	art();
+	cout << endl;
+	cout<<"\n\t  \t\t\t\t\t\t\t  1. Issue Book";
+	cout<<"\n\t  \t\t\t\t\t\t\t  2. Return Book";
+	cout<<"\n\t  \t\t\t\t\t\t\t  3. List of issued books";
+	cout<<"\n\t  \t\t\t\t\t\t\t  4. Change Password";
+	cout<<"\n\t  \t\t\t\t\t\t\t  5. Log Out"<<endl<<"\n";
+	cout<<"\n\t  \t\t\t\t\t\t\tINPUT :";
+	cin>>x;
+	system("cls");
+	if (x==1){
+		book_issue(studentid,i);
+	}
+	else if(x==2){
+		book_return(studentid,i);
+	}
+	else if(x==3){
+		cout<<"working";
+		show_student_issued_book(studentid);
+        cout<<"\n\n\n\n\t  \t\t\tReturning to student's portal.."<<endl<<endl;
+        cout<<"\t  \t\t\t"<<endl;
+        Sleep(1000);
+        cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
+        cout<<"\t  \t\t\t";
+        getch();
+        system("cls");
+        students_portal(studentid,i);
+	}
+	else if(x==4){
+		changepassword(studentid,i);
+	}
+	else if(x==5){
+		ofstream log;
+		log.open("logfile.txt",ios::app);
+		log<<dateret()<<"\t"<<student[i].name<<" logged out from the system 	"<<"student ID : "<<studentid;
+		log<<endl<<"=========================================================================================================================================================================="<<endl;
+		log.close();
+
+		menu();
+	}
+	else{
+		system("COLOR F4");//red
+		system("cls");
+		art();
+		cout<<"\n\n\n\n";
+		cout<<"\n\t  \t\t\t\t\t\t\t  Invalid Choice.......";
+		cout<<"\n\t  \t\t\t\t\t\t\t  Try Again.....";
+		Sleep(1000);
+		system("cls");
+		system("COLOR F0");//black
+		Sleep(500);
+		students_portal(studentid,i);
+	}
+}
+void book_issue(int studentid,int i){
+	system("cls");
+	art();
+	if(student[i].issue_limit>0){
+		show_available_book();
+		int x;
+		cout << endl;
+		cout<<"\n\t  \t\t\t\t\t\t\t  Enter book ID to issue the book :";
+		cin>>x;
+		int present=0;
+		for (int j = 0; j < book.size(); j++){
+			if(book[j].book_id==x){
+				if(book[i].status=='A'){
+					student[i].issue_limit--;
+					book[j].owner=studentid;
+					book[j].status='I';
+					present++;
+					system("COLOR F1");//blue
+					cout<<"\n\n\n\t  \t\t\t\t\t\t\t  Book issued to "<<student[i].name<<" current limit for issuing book is "<<student[i].issue_limit<<endl;
+					Sleep(500);
+	    			cout<<"\t  \t\t\tReturning to student's portal.."<<endl<<endl;
+	    			cout<<"\t  \t\t\t"<<endl;
+					Sleep(1000);
+	    			cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
+	    			cout<<"\t  \t\t\t";
+						ofstream log;
+						log.open("logfile.txt",ios::app);
+						log<<dateret()<<"\t"<<book[j].name<<" issued by the user\t\tbook ID : "<<book[j].book_id <<endl;
+						log.close();
+					
+	    			getch();
+					//system("COLOR F5");
+					system("cls");
+					system("COLOR F0");//black
+					Sleep(500);
+					save_database();
+	    			students_portal(studentid,i);
+				}
+				else{
+					system("COLOR F4");//red
+					cout<<"\nYou are trying to issue a book not currently issued to someone else";
+					Sleep(500);
+    				cout<<"\t  \t\t\tReturning to student's portal.."<<endl<<endl;
+    				cout<<"\t  \t\t\t"<<endl;
+					Sleep(1000);
+    				cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
+    				cout<<"\t  \t\t\t";
+    				getch();
+					system("cls");
+					system("COLOR F0");//black
+					Sleep(500);
+    				students_portal(studentid,i);
+				}
+			}
+		}
+		if(present==0){
+			system("COLOR F4");//red
+			cout<<"\n\n\t  \t\t\tBook not found in library!";
+			Sleep(500);
+			cout<<"\t  \t\t\tReturning to student's portal.."<<endl<<endl;
+			cout<<"\t  \t\t\t"<<endl;
+			Sleep(1000);
+			cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
+			cout<<"\t  \t\t\t";
+			getch();
+			system("cls");
+			system("COLOR F0");//black
+			Sleep(500);
+			students_portal(studentid,i);
+		}
+	}
+	else{
+		system("COLOR F4");//red
+		cout<<"Sorry! You have reached your limit of issued books.";
+		Sleep(500);
+    	cout<<"\t  \t\t\tReturning to student's portal.."<<endl<<endl;
+    	cout<<"\t  \t\t\t"<<endl;
+		Sleep(1000);
+    	cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
+    	cout<<"\t  \t\t\t";
+    	getch();
+		system("cls");
+		system("COLOR F0");//black
+		Sleep(500);
+    	students_portal(studentid,i);	
+	}
+}
+void book_return(int studentid,int i){
+	system("cls");
+	art();
+	if(student[i].issue_limit>=0){
+		show_student_issued_book(studentid);
+		int x;
+		cout << endl;
+		cout<<"\n\t  \t\t\t\t\t\t\t  Enter book ID to Return the book :";
+		cin>>x;
+		int present=0;
+		for (int j = 0; j < book.size(); j++){
+			if(book[j].book_id==x){
+				if(book[j].owner==studentid){
+					system("COLOR F1");//blue
+					student[i].issue_limit++;
+					book[j].owner= 1111111;
+					book[j].status='A';
+					present++;
+					cout<<"\n\n\n\t  \t\t\t\t\t\t\t  Book Returned Successfully "<<" current limit for issuing book is "<<student[i].issue_limit<<endl;
+					Sleep(500);
+    				cout<<"\t  \t\t\tReturning to student's portal.."<<endl<<endl;
+    				cout<<"\t  \t\t\t"<<endl;
+					Sleep(1000);
+    				cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
+    				cout<<"\t  \t\t\t";
+
+						ofstream log;
+						log.open("logfile.txt",ios::app);
+						log<<dateret()<<"\t"<<book[j].name<<" returned by the user\t\tbook ID : "<<book[j].book_id <<endl;
+						log.close();
+    				getch();
+					system("cls");
+					system("COLOR F0");//black
+					Sleep(500);
+					save_database();
+    				students_portal(studentid,i);
+				}
+				else{
+					system("COLOR F4");//red
+					cout<<"\nYou are trying to return a book not issued to you";
+					Sleep(500);
+    				cout<<"\t  \t\t\tReturning to student's portal.."<<endl<<endl;
+    				cout<<"\t  \t\t\t"<<endl;
+					Sleep(1000);
+    				cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
+    				cout<<"\t  \t\t\t";
+    				getch();
+					system("cls");
+					system("COLOR F0");//black
+					Sleep(500);
+    				students_portal(studentid,i);
+				}
+			}
+		}
+		if(present==0){
+			system("COLOR F4");//red
+			cout<<"\n\n\t  \t\t\tBook not found in your issued book list";
+			Sleep(500);
+			cout<<"\t  \t\t\tReturning to student's portal.."<<endl<<endl;
+			cout<<"\t  \t\t\t"<<endl;
+			Sleep(1000);
+			cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
+			cout<<"\t  \t\t\t";
+			getch();
+			system("cls");
+			system("COLOR F0");//black
+			Sleep(500);
+			students_portal(studentid,i);
+		}
+	}
+	else{
+		system("COLOR F4");//red
+		cout<<"Sorry! You dont have any book issued.";
+		Sleep(500);
+    	cout<<"\t  \t\t\tReturning to student's portal.."<<endl<<endl;
+    	cout<<"\t  \t\t\t"<<endl;
+		Sleep(1000);
+    	cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
+    	cout<<"\t  \t\t\t";
+    	getch();
+		system("cls");
+		system("COLOR F0");//black
+		Sleep(500);
+    	students_portal(studentid,i);	
+	}
+}
+void show_student_issued_book(int studentid){
+	system("cls");
+	art();
+	cout<<endl;
+	cout << "\t    book id\t"									<< setw(15 )<<"name"<<"\t\t\tprice\tcurrently issued to\tstatus\tedition" << endl;
+	cout << "\t    ==============================================================================================================================" << endl;
+	for (int i = 0; i < book.size(); i++){
+		if(book[i].owner==studentid){
+			cout << "\t    " << book[i].book_id <<"\t"<<setw(25) <<book[i].name<<"\t"	<<  book[i].price << "\t      " << book[i].owner << "\t\t   " << book[i].status << "\t "<< book[i].edition << endl;
+		}
+	}
+}
+void changepassword(int studentid,int i){
+	system("cls");
+	art();
+	cout<<endl;
+	char temppass[20];
+	char temppass2[20],temppass3[20];
+	cout<<"\n\t  \t\t\t\t\tWELCOME ";
+	cout<<"\n\t\t  \tStudent name : ";
+	cout<< student[i].name;
+	cout<<"\n\t\t  \tStudent ID : ";
+	cout<< student[i].student_id;
+	cout<<"\n\n\t\t	 \tEnter old Password :";
+	cin >> temppass;
+	//cout<<temppass<<" "<<student[i].password;
+	if(strcmp(temppass, student[i].password) == 0){
+		retry:
+		system("cls");
+		system("COLOR F0");//black
+		Sleep(500);
+		art();
+		cout<<endl;
+		cout<<"\n\n\n\t  \t\t\tOld password was correct!"<<endl;
+		cout<<"\t  \t\t\tEnter  new  password : ";
+		cin>>temppass2;
+		//cin.ignore();
+		cout<<"\t  \t\t\tConfirm new password : ";
+		cin>>temppass3;
+		if(strcmp(temppass3, temppass2) == 0){
+			for(int t=0;t<20;t++){
+				student[i].password[t]=temppass2[t];
+			}
+			system("COLOR F1");//blue
+			cout<<"\n\t\t\t\t  \t\t\tPassword changed successfully "<<endl;
+			cout<<"\t  \t\t\tRedirecting to student's portal.."<<endl<<endl;
+    		cout<<"\t  \t\t\t"<<endl;
+			Sleep(1000);
+    		cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
+    		cout<<"\t  \t\t\t";
+				ofstream log;
+				log.open("logfile.txt",ios::app);
+				log<<dateret()<<"\t"<<student[i].name<<" Password change successfully!!   	Student ID : "<<student[i].student_id<<endl;
+				log.close();
+    		getch();
+			system("cls");
+			system("COLOR F0");//black
+			Sleep(500);
+			save_database();
+    		students_portal(studentid,i);	
+		}
+		else{
+			system("COLOR F4");//red
+			cout<<"\n\t\t\t\t  \t\t\tPassword does not Match "<<endl;
+			cout<<"\t  \t\t\tEnter Password again.... "<<endl;
+			Sleep(1000);
+    		cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
+    		cout<<"\t  \t\t\t";	
+			getch();
+			system("COLOR F0");//black
+			Sleep(500);
+			goto retry;
+		}
+	}
+	else{
+		system("COLOR F4");//red
+		cout<<"\n\n\n\t\t\t\t  \t\t\tPassword does not Match "<<endl;
+		cout<<"\t  \t\t\tRedirecting to student's portal.."<<endl<<endl;
+    	cout<<"\t  \t\t\t"<<endl;
+		Sleep(1000);
+    	cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
+    	cout<<"\t  \t\t\t";
+			ofstream log;
+			log.open("logfile.txt",ios::app);
+			log<<dateret()<<"\t"<<student[i].name<<" Password change attempt failed!! 	Student ID : "<<student[i].student_id<<endl;
+			log.close();
+    	getch();
+		system("cls");
+		system("COLOR F0");//black
+		Sleep(500);
+		save_database();
+    	students_portal(studentid,i);	
 	}
 }
 void add_new_student (){
@@ -313,211 +644,41 @@ void add_new_student (){
 	art();
 	cout << endl;
 	int i=student.size();
+	system("COLOR F1");//blue
 	cout<<"\t  \t\t\tUser added successfull ......................."<<endl;
 	cout<<"\n\t  \t\t\t\t\tWELCOME ";
 	cout << student[i-1].name;
 	cout<<"\t  \tStudent ID : ";
 	cout << student[i-1].student_id;
+					ofstream log;
+					log.open("logfile.txt",ios::app);
+					log<<dateret()<<"\t"<<student[i-1].name<<" Registered to the system with student ID :"<<student[i-1].student_id;
+					log<<endl<<"=========================================================================================================================================================================="<<endl;
+					log.close();
 	cout<<"\t  \t\t\tReturning to student portal to continue ......"<<endl<<endl<<endl;
     cout<<"\t  \t\t\t"<<endl;
+	save_database();
 	Sleep(1000);
     cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
     cout<<"\t  \t\t\t";
     getch();
+	system("COLOR F0");//black
+	Sleep(500);
 	system("cls");
     student_corner();	
-}
-void students_portal(int studentid,int i){
-	int x;
-	art();
-	cout << endl;
-	cout<<"\n\t  \t\t\t\t\t\t\t  1. Issue Book";
-	cout<<"\n\t  \t\t\t\t\t\t\t  2. Return Book";
-	cout<<"\n\t  \t\t\t\t\t\t\t  3. List of issued books";
-	cout<<"\n\t  \t\t\t\t\t\t\t  4. Log Out"<<endl<<"\n";
-	cout<<"\n\t  \t\t\t\t\t\t\tINPUT :";
-	cin>>x;
-	system("cls");
-	if (x==1){
-		book_issue(studentid,i);
-	}
-	else if(x==2){
-		book_return(studentid,i);
-	}
-	else if(x==3){
-		cout<<"working";
-		show_student_issued_book(studentid);
-        cout<<"\n\n\n\n\t  \t\t\tReturning to student's portal.."<<endl<<endl;
-        cout<<"\t  \t\t\t"<<endl;
-        Sleep(1000);
-        cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
-        cout<<"\t  \t\t\t";
-        getch();
-        system("cls");
-        students_portal(studentid,i);
-	}
-	else if(x==4){
-		menu();
-	}
-	else{
-		system("cls");
-		art();
-		cout<<"\n\n\n\n";
-		cout<<"\n\t  \t\t\t\t\t\t\t  Invalid Choice.......";
-		cout<<"\n\t  \t\t\t\t\t\t\t  Try Again.....";
-		Sleep(1000);
-		system("cls");
-		students_portal(studentid,i);
-	}
-}
-void book_issue(int studentid,int i){
-	system("cls");
-	art();
-	if(student[i].issue_limit>0){
-		show_available_book();
-		int x;
-		cout << endl;
-		cout<<"\n\t  \t\t\t\t\t\t\t  Enter book ID to issue the book ";
-		cin>>x;
-		int present=0;
-		for (int j = 0; j < book.size(); j++){
-			if(book[j].book_id==x){
-				if(book[i].status=='A'){
-					student[i].issue_limit--;
-					book[j].owner=studentid;
-					book[j].status='I';
-					present++;
-					cout<<"\n\n\n\t  \t\t\t\t\t\t\t  Book issued to "<<student[i].name<<" current limit for issuing book is "<<student[i].issue_limit<<endl;
-					Sleep(500);
-	    			cout<<"\t  \t\t\tReturning to student's portal.."<<endl<<endl;
-	    			cout<<"\t  \t\t\t"<<endl;
-					Sleep(1000);
-	    			cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
-	    			cout<<"\t  \t\t\t";
-	    			getch();
-					system("cls");
-	    			students_portal(studentid,i);
-				}
-				else{
-					cout<<"\nYou are trying to issue a book not currently issued to someone else";
-					Sleep(500);
-    				cout<<"\t  \t\t\tReturning to student's portal.."<<endl<<endl;
-    				cout<<"\t  \t\t\t"<<endl;
-					Sleep(1000);
-    				cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
-    				cout<<"\t  \t\t\t";
-    				getch();
-					system("cls");
-    				students_portal(studentid,i);
-				}
-			}
-		}
-		if(present==0){
-			cout<<"\n\n\t  \t\t\tBook not found in library!";
-			Sleep(500);
-			cout<<"\t  \t\t\tReturning to student's portal.."<<endl<<endl;
-			cout<<"\t  \t\t\t"<<endl;
-			Sleep(1000);
-			cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
-			cout<<"\t  \t\t\t";
-			getch();
-			system("cls");
-			students_portal(studentid,i);
-		}
-	}
-	else{
-		cout<<"Sorry! You have reached your limit of issued books.";
-		Sleep(500);
-    	cout<<"\t  \t\t\tReturning to student's portal.."<<endl<<endl;
-    	cout<<"\t  \t\t\t"<<endl;
-		Sleep(1000);
-    	cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
-    	cout<<"\t  \t\t\t";
-    	getch();
-		system("cls");
-    	students_portal(studentid,i);	
-	}
-}
-void book_return(int studentid,int i){
-	system("cls");
-	art();
-	if(student[i].issue_limit>0){
-		show_student_issued_book(studentid);
-		int x;
-		cout << endl;
-		cout<<"\n\t  \t\t\t\t\t\t\t  Enter book ID to Return the book ";
-		cin>>x;
-		int present=0;
-		for (int j = 0; j < book.size(); j++){
-			if(book[j].book_id==x){
-				if(book[j].owner==studentid){
-					student[i].issue_limit++;
-					book[j].owner= 1111111;
-					book[j].status='A';
-					present++;
-					cout<<"\n\n\n\t  \t\t\t\t\t\t\t  Book Returned Successfully "<<" current limit for issuing book is "<<student[i].issue_limit<<endl;
-					Sleep(500);
-    				cout<<"\t  \t\t\tReturning to student's portal.."<<endl<<endl;
-    				cout<<"\t  \t\t\t"<<endl;
-					Sleep(1000);
-    				cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
-    				cout<<"\t  \t\t\t";
-    				getch();
-					system("cls");
-    				students_portal(studentid,i);
-				}
-				else{
-					cout<<"\nYou are trying to return a book not issued to you";
-					Sleep(500);
-    				cout<<"\t  \t\t\tReturning to student's portal.."<<endl<<endl;
-    				cout<<"\t  \t\t\t"<<endl;
-					Sleep(1000);
-    				cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
-    				cout<<"\t  \t\t\t";
-    				getch();
-					system("cls");
-    				students_portal(studentid,i);
-				}
-			}
-		}
-		if(present==0){
-			cout<<"\n\n\t  \t\t\tBook not found in your issued book list";
-			Sleep(500);
-			cout<<"\t  \t\t\tReturning to student's portal.."<<endl<<endl;
-			cout<<"\t  \t\t\t"<<endl;
-			Sleep(1000);
-			cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
-			cout<<"\t  \t\t\t";
-			getch();
-			system("cls");
-			students_portal(studentid,i);
-		}
-	}
-	else{
-		cout<<"Sorry! You dont have any book issued.";
-		Sleep(500);
-    	cout<<"\t  \t\t\tReturning to student's portal.."<<endl<<endl;
-    	cout<<"\t  \t\t\t"<<endl;
-		Sleep(1000);
-    	cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
-    	cout<<"\t  \t\t\t";
-    	getch();
-		system("cls");
-    	students_portal(studentid,i);	
-	}
 }
 
 void admin_login(){
 	system("cls");
 	art();
 	cout << endl;
+	string password;
 	int adminid;
+	int coutoo=0;
 	cout << "\n\t  \t\t\t\tPlease enter Admin id : ";
 	cin >> adminid;
-	int coutoo=0;
-	string password;
 	char c;
-	for (int i = 0 ; i < student_count() ; i++){
+	for (int i = 0 ; i < admin_count() ; i++){
 		if (adminid == admin[i].admin_id){
 			cout << "\n\t  \t\t\t\tPlease enter password : ";
 			while(c != '\r'){ 
@@ -538,6 +699,7 @@ void admin_login(){
 					}
     		    }
 			if(password==admin[i].password){
+				system("COLOR F1");//blue
 				coutoo++;
                 system("cls");
 	            art();
@@ -545,17 +707,26 @@ void admin_login(){
 				cout<<"\n\t  \t\t\t\t\tWELCOME ";
 				cout << admin[i].name;
 				cout<<"\t  \tAdmin ID : ";
-				cout << admin[i].admin_id;
-				cout<<"\t  \t\t\tRedirecting to admin's portal.."<<endl<<endl;
+				cout << admin[i].admin_id<<endl;
+				cout<<"\n\t  \t\t\tRedirecting to admin's portal.."<<endl<<endl;
     			cout<<"\t  \t\t\t"<<endl;
 				Sleep(1000);
+						
     			cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
     			cout<<"\t  \t\t\t";
-    			getch();
+						fflush(stdin);
+						ofstream log;
+						log.open("logfile.txt",ios::app);
+						log<<dateret()<<"\t"<<admin[i].name<<" logged in to the system    Admin  ID  : "<<admin[i].admin_id<<endl;
+						log.close();
+				getch();
 				system("cls");
-    			admins_portal();
+				system("COLOR F0");//black
+				Sleep(500);
+    			admins_portal(admin[i].admin_id,i);
 			}
 			else{
+				system("COLOR F4");//red
 				cout<<"\t  \t\t\tWrong Password.."<<endl<<endl;
 				cout<<"\t  \t\t\tReturning to Main Menu.."<<endl<<endl;
     			cout<<"\t  \t\t\t"<<endl;
@@ -564,11 +735,14 @@ void admin_login(){
     			cout<<"\t  \t\t\t";
     			getch();
 				system("cls");
+				system("COLOR F0");//black
+				Sleep(500);
     			menu();
 			}
 		}
 	}
 	if(coutoo==0){
+			system("COLOR F4");//red
 			cout<<endl;
     		cout<<"\t  \t\t\tAdmin ID not found ......"<<endl;
 			Sleep(500);
@@ -579,10 +753,12 @@ void admin_login(){
     		cout<<"\t  \t\t\t";
     		getch();
 			system("cls");
+			system("COLOR F0");//black
+			Sleep(500);
     		menu();
 	}
 }
-void admins_portal(){
+void admins_portal(int adminid,int i){
     system("cls");
 	int x;
 	art();
@@ -595,19 +771,145 @@ void admins_portal(){
 	cout<<"\n\t  \t\t\t\t\t\t\t  6. Show issued books  ";
 	cout<<"\n\t  \t\t\t\t\t\t\t  7. show all students";
 	cout<<"\n\t  \t\t\t\t\t\t\t  8. Reset book availability";
-	cout<<"\n\t  \t\t\t\t\t\t\t  9. Log out"<<endl<<"\n";
+	cout<<"\n\t  \t\t\t\t\t\t\t  9. Read System Logs";
+	cout<<"\n\t  \t\t\t\t\t\t\t 10. Log out"<<endl<<"\n";
 	cout<<"\n\t  \t\t\t\t\t\t\tInput ::";
 	cin>>x;
 	system("cls");
-	if (x==1)	  {	add_new_admin();		}	
-	else if (x==2){	show_all_book();		}
-	else if (x==3){	add_book();				}
-	else if (x==4){	delete_book();			}
-	else if (x==5){	show_available_book();	}
-	else if (x==6){	show_issued_book();		}
-	else if (x==7){	show_all_student();		}
-	else if (x==8){	reset_book();			}
-	else if (x==9){	menu();					}
+	if (x==1)	  {	add_new_admin(adminid);		}	
+	else if (x==2){
+		show_all_book();
+		cout<<"\n\n\n\n\t  \t\t\tReturning to admin's portal.."<<endl<<endl;
+        cout<<"\t  \t\t\t"<<endl;
+        Sleep(1000);
+        cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
+        cout<<"\t  \t\t\t";
+        getch();
+        system("cls");
+        admins_portal(adminid,i);
+	}
+	else if (x==3){	add_book(adminid,i);				}
+	else if (x==4){	delete_book(adminid,i);			}
+	else if (x==5){
+		show_available_book();
+		cout<<"\n\n\n\n\t  \t\t\tReturning to admin's portal.."<<endl<<endl;
+        cout<<"\t  \t\t\t"<<endl;
+        Sleep(1000);
+        cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
+        cout<<"\t  \t\t\t";
+        getch();
+        system("cls");
+        admins_portal(adminid,i);
+	}
+	else if (x==6){
+		show_issued_book();
+		cout<<"\n\n\n\n\t  \t\t\tReturning to admin's portal.."<<endl<<endl;
+        cout<<"\t  \t\t\t"<<endl;
+        Sleep(1000);
+        cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
+        cout<<"\t  \t\t\t";
+        getch();
+        system("cls");
+        admins_portal(adminid,i);
+	}
+	else if (x==7){
+		show_all_student();
+		cout<<"\n\n\n\n\t  \t\t\tReturning to admin's portal.."<<endl<<endl;
+        cout<<"\t  \t\t\t"<<endl;
+        Sleep(1000);
+        cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
+        cout<<"\t  \t\t\t";
+        getch();
+        system("cls");
+        admins_portal(adminid,i);
+	}
+	else if (x==8){	reset_book(adminid,i);			}
+	else if (x==9){
+        system("cls");
+			ofstream log;
+			log.open("logfile.txt",ios::app);
+			log<<dateret()<<"\t"<<admin[i].name<<" accessed log history \t\t Admin ID : "<<admin[i].admin_id <<endl;
+			log.close();
+		readlogs();
+		cout<<"\n\n\n\n\t  \t\t\tReturning to admin's portal.."<<endl<<endl;
+        cout<<"\t  \t\t\t"<<endl;
+        Sleep(1000);
+        cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
+        cout<<"\t  \t\t\t";
+        getch();
+        system("cls");
+        admins_portal(adminid,i);
+	}
+	else if (x==10){
+		save_database();
+		ofstream log;
+		log.open("logfile.txt",ios::app);
+		log<<dateret()<<"\t"<<admin[i].name<<" logged out from the system 	"<<"Admin ID : "<<adminid; ;
+		log<<endl<<"=========================================================================================================================================================================="<<endl;
+		log.close();
+		menu();
+		}
+	else{
+		system("COLOR F4");//red
+		system("cls");
+		art();
+		cout<<"\n\n\n\n";
+		cout<<"\n\t  \t\t\t\t\t\t\t  Invalid Choice.......";
+		cout<<"\n\t  \t\t\t\t\t\t\t  Try Again.....";
+		Sleep(1000);
+		system("cls");
+		system("COLOR F0");//black
+		Sleep(500);
+		admins_portal(adminid,i);
+	}
+}
+void add_new_admin(int adminid){
+	art();
+	cout << endl;
+
+	adminc temp;
+	cout << "\n\t  \t\t\t\tPlease enter Admin id : ";
+	cin >> temp.admin_id;
+    cin.ignore();
+	cout << "\n\t  \t\t\t\tPlease enter Name : ";
+	getline(cin, temp.name); 
+	cout << "\n\t  \t\t\t\tPlease enter Password : ";
+	cin >> temp.password;
+	admin.push_back(temp);
+	
+	system("cls");
+	cout<<"\n\n\n";
+	art();
+	system("COLOR F1");//blue
+	
+	cout << endl;
+	int i=admin.size();
+	cout<<"\t  \t\t\tAdmin added successfull ......................."<<endl;
+	cout<<"\n\t  \t\t\t\t\tWELCOME ";
+	cout << admin[i-1].name;
+	cout<<"\t  \tAdmin ID : ";
+	cout << admin[i-1].admin_id;
+	Sleep(1000);
+					ofstream log;
+					log.open("logfile.txt",ios::app);
+					log<<dateret()<<"\t\t\t"<<" New Admin Registered to the system :"<<endl;
+					log<<dateret()<<"\t"<<"New Admin name : "<< admin[i-1].name <<" New Admin ID :"<<admin[i-1].admin_id <<endl;
+					log<<dateret()<<"\t"<<"Admin Added by Admin id :"<<adminid <<endl;
+					log<<dateret()<<"\t"<<adminid<<" logged out from the system for security purposes " ;
+					log<<endl<<"=========================================================================================================================================================================="<<endl;
+					log.close();
+
+    save_database();
+	cout<<"\t  \t\t\tReturning to Main Menu for security purposes .."<<endl<<endl;
+    cout<<"\t  \t\t\t"<<endl;
+	Sleep(1000);
+    cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
+    cout<<"\t  \t\t\t";
+    getch();
+	system("COLOR F0");//black
+	Sleep(500);
+	system("cls");
+    menu();	
 }
 void show_all_book(){
 	system("cls");
@@ -619,7 +921,7 @@ void show_all_book(){
 		cout << "\t    " << book[i].book_id <<"\t"<<setw(25) <<book[i].name<<"\t"	<<  book[i].price << "\t      " << book[i].owner << "\t\t   " << book[i].status << "\t "<< book[i].edition << endl;
 	}
 }		
-void add_book(){
+void add_book(int adminid,int i){
     cout<<"\n\n\n";
 	art();
 	cout << endl;
@@ -627,6 +929,7 @@ void add_book(){
 	bookc temp;
 	cout << "\n\t  \t\t\t\tPlease enter new book id : ";
 	cin >> temp.book_id;
+	cin.ignore();
 	cout << "\n\t  \t\t\t\tPlease enter new book name : ";
 	getline(cin, temp.name); 
 	cout << "\n\t  \t\t\t\tPlease enter new book price: ";
@@ -641,19 +944,27 @@ void add_book(){
 	cout<<"\n\n\n";
 	art();
 	cout << endl;
-	int i=student.size();
+					system("COLOR F1");//blue
+	
 	cout<<"\t  \t\t\tbook added successfull ......................."<<endl;
 	cout<<"\t  \t\t\tReturning to admin portal to continue ......"<<endl<<endl<<endl;
     cout<<"\t  \t\t\t"<<endl;
 	Sleep(1000);
+					ofstream log;
+					int j= book.size();
+					log.open("logfile.txt",ios::app);
+					log<<dateret()<<"\t"<<book[j-1].name<<" Book Registered to the system from Admin ID :"<<adminid<<"Book ID :"<<temp.book_id<<endl;
+					log.close();
     cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
     cout<<"\t  \t\t\t";
     getch();
 	system("cls");
+					system("COLOR F0");//black
+					Sleep(500);
     save_database();
-    admins_portal();	
+    admins_portal(adminid,i);	
 }				
-void delete_book(){
+void delete_book(int adminid,int j){
     cout<<"\n\n\n";
 	art();
 	cout << endl;
@@ -664,10 +975,12 @@ void delete_book(){
 	cout << "\n\t  \t\t\t\tPlease enter book id to delete : ";
 	cout << "\n\t  \t\t\t\t";
 	cin>>x;
-	int check=0;
-    
+	int check=0, tempsto1;
+    string tempsto;
 	for (int i = 0; i < book.size(); i++){
 		if(book[i].book_id==x){
+			tempsto=book[i].name;
+			tempsto1=book[i].book_id;
             check++;
 			for(int j= i;j<book.size()-1;j++){
                 book[j]=book[j+1];
@@ -681,19 +994,28 @@ void delete_book(){
 	    system("cls");
 	    cout<<"\n\n\n";
 	    art();
+					system("COLOR F1");//blue
 	    cout << endl;
-	    int i=student.size();
 	    cout<<"\t  \t\t\tbook ("<<x<<") deleted successfully ......................."<<endl;
 	    cout<<"\t  \t\t\tReturning to admin portal to continue ......"<<endl<<endl<<endl;
         cout<<"\t  \t\t\t"<<endl;
+					ofstream log;
+					int i= book.size();
+					log.open("logfile.txt",ios::app);
+					log<<dateret()<<"\t"<<tempsto<<" Book deleted from the system from Admin ID :"<<adminid<<"Book ID :"<<tempsto1<<endl;
+					log.close();
 	    Sleep(1000);
         cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
         cout<<"\t  \t\t\t";
         getch();
 	    system("cls");
-        admins_portal();	
+					system("COLOR F0");//black
+					Sleep(500);
+		save_database();
+        admins_portal(adminid,j);	
     }
     else if(check==0){
+					system("COLOR F4");//red
         cout<<"\n\n\t  \t\t\tBook ("<<x<<") not found ";
 		Sleep(500);
 	    cout<<"\t  \t\t\tReturning to admin portal to continue ......"<<endl<<endl<<endl;
@@ -703,7 +1025,9 @@ void delete_book(){
 		cout<<"\t  \t\t\t";
 		getch();
 		system("cls");
-		admins_portal();
+					system("COLOR F0");//black
+					Sleep(500);
+		admins_portal(adminid,j);
     }
 }			
 void show_available_book(){
@@ -740,20 +1064,7 @@ void show_all_student(){
 		cout << "\t    " <<student[i].student_id <<"\t"<<setw(25) <<student[i].name<<"\t"	<<  student[i].password << "\t      " << student[i].issue_limit << endl;
 	}
 }		
-void show_student_issued_book(int studentid){
-	system("cls");
-	art();
-	cout<<endl;
-	cout << "\t    book id\t"									<< setw(15 )<<"name"<<"\t\t\tprice\tcurrently issued to\tstatus\tedition" << endl;
-	cout << "\t    ==============================================================================================================================" << endl;
-	for (int i = 0; i < book.size(); i++){
-		if(book[i].owner==studentid){
-			cout << "\t    " << book[i].book_id <<"\t"<<setw(25) <<book[i].name<<"\t"	<<  book[i].price << "\t      " << book[i].owner << "\t\t   " << book[i].status << "\t "<< book[i].edition << endl;
-		}
-	}
-}
-
-void reset_book(){
+void reset_book(int adminid,int i){
 	for(int z=0;z<6;z++){
 	    system("cls");
 	    art();
@@ -767,56 +1078,45 @@ void reset_book(){
 	art();
 	cout << endl;
 
-	for (int i = 0; i < book.size(); i++){
-		book[i].status='A';
-		book[i].owner=1111111;
+	for (int k = 0; k < book.size(); k++){
+		book[k].status='A';
+		book[k].owner=1111111;
 	}
     for (int j = 0; j < student.size(); j++){
 		student[j].issue_limit=5;
 	}
+					system("COLOR F1");//blue
 	cout<<"\t  \t\t\tBooks resetted successfully ......................."<<endl;
 	cout<<"\t  \t\t\tReturning to admin's portal to continue ......"<<endl<<endl<<endl;
     cout<<"\t  \t\t\t"<<endl;
 	Sleep(1000);
+					ofstream log;
+					log.open("logfile.txt",ios::app);
+					log<<dateret()<<"\t"<<admin[i].name <<" Performed book availability reset "<<endl;
+					log<<dateret()<<"\tBook resetted with Admin ID :"<<adminid<<endl;
+					log.close();
     cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
     cout<<"\t  \t\t\t";
     getch();
 	system("cls");
-    admins_portal();	
+					system("COLOR F0");//black
+					Sleep(500);
+	save_database();
+    admins_portal(adminid,i);	
 }			
-
-void add_new_admin(){
-	art();
-	cout << endl;
-
-	adminc temp;
-	cout << "\n\t  \t\t\t\tPlease enter Admin id : ";
-	cin >> temp.admin_id;
-    cin.ignore();
-	cout << "\n\t  \t\t\t\tPlease enter Name : ";
-	getline(cin, temp.name); 
-	cout << "\n\t  \t\t\t\tPlease enter Password : ";
-	cin >> temp.password;
-	admin.push_back(temp);
-	
+void readlogs(){
 	system("cls");
-	cout<<"\n\n\n";
-	art();
-	cout << endl;
-	int i=admin.size();
-	cout<<"\t  \t\t\tAdmin added successfull ......................."<<endl;
-	cout<<"\n\t  \t\t\t\t\tWELCOME ";
-	cout << admin[i-1].name;
-	cout<<"\t  \tAdmin ID : ";
-	cout << admin[i-1].admin_id;
-	Sleep(1000);
-    cout<<"\t  \t\t\tPress Enter to Continue."<<endl;
-    cout<<"\t  \t\t\t";
-    getch();
-    save_database();
-	system("cls");
-    admins_portal();	
+	ifstream ifs ("logfile.txt");    
+	while (ifs.good()){
+		string TempLine;
+		getline (ifs , TempLine);
+		cout<<TempLine<<endl;
+	}
+	cout<<"\n\t  \t\t\t\t\t\t\t";
+	ifs.close ();
+	Sleep(3000);
 }
+
 void rules_and_regulations(){
 	art();
 	cout<<endl;
@@ -832,6 +1132,7 @@ void rules_and_regulations(){
 	system("cls");
 	menu();
 }
+
 int book_count(){
 	int no_of_books = 0;
 	ifstream ifs("book_details.txt"); 
@@ -974,13 +1275,17 @@ void save_database(){
 	rename("temp_student_details.txt" 	 ,"student_details.txt"    );
 	rename("temp_book_details.txt" 		 ,"book_details.txt" 	   );
 }
+
 int main(){
 	fullscreen();
 	Sleep(1000);
-    system("COLOR F0");
-	//Sleep(500);
-    ////loading_screen();
-	//welcome_art();
+	system("COLOR F2");//green					
+	Sleep(500);
+    loading_screen();
+	system("cls");
+	system("COLOR F0");//black
+	Sleep(300);
+	welcome_art();
 	system("cls");
 	
 	read_students_details();
@@ -989,3 +1294,8 @@ int main(){
 	menu();
 	return 0;
 }
+//system("COLOR F1");	//blue  text on white background 
+//system("COLOR F2");	//green text on white background 
+//system("COLOR F4");	//red   text on white background 
+//system("COLOR F0");	//black text on white background 
+//Sleep(500);

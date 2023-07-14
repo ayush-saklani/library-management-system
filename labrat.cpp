@@ -49,30 +49,90 @@ void art(){
 	bookc book_issued[1000] ;
 	vector<studentc> student ;
 	adminc admin[100] ;
-
+string dateret(){
+    time_t     now = time(0);
+    struct tm  tstruct;
+    char       buf[80];
+    tstruct = *localtime(&now);
+    strftime(buf, sizeof(buf), "DATE: %d/%m/%Y TIME: %X", &tstruct);
+    return buf ;
+}
 int main(){
-	for(int z=0;z<6;z++){
-	    system("cls");
-	    art();
-	    cout << endl;
-             if(z==0||z==3){cout<<"\n\n\n\t  \t\t\t Resetting in progress ..";}
-        else if(z==1||z==4){cout<<"\n\n\n\t  \t\t\t Resetting in progress ....";}
-        else if(z==2||z==5){cout<<"\n\n\n\t  \t\t\t Resetting in progress ......";}
-		Sleep(1000);
-	}
-	//sort(book.begin(), book.end());
-	for(int i=0;i<5;i++){
-    	
-		cout<<  student[i].name			<<" ";
-		cout<<  student[i].issue_limit	<<" ";
-		cout<<  student[i].password		<<" ";
-		cout<<  student[i].student_id	<<" ";
-		cout<<	endl;
-	}
-	cout << "\t    student id\t"									<< setw(25 )<<"student name"<<"\t password\tissue limit" << endl;
-	cout << "\t    ==============================================================================================================================" << endl;
-	for (int i = 0; i < 5; i++){
-		cout << "\t    " <<student[i].student_id <<"\t"<<setw(25) <<student[i].name<<"\t"	<<  student[i].password << "\t      " << student[i].issue_limit << endl;
-	}
-    
+	//char temp[20];
+	//char temp2[20];
+	//cin>>temp	;
+	//cin>>temp2;
+	//cout<<temp;
+	//for(int i=0;i<20;i++){
+	//	temp[i]=temp2[i];
+	//}
+	//cout<<temp;
+	//cout<<"+++";
+	//string date = dateret();
+	//cout<< dateret();
+	//	
+	 
+	//studentc temp;
+	//for(int i=0;i<3;i++){
+    //	
+	//		//	cin >> temp.name;
+	//			temp.issue_limit	= 5;
+	//			temp.password		= "ayush";
+	//			temp.student_id	= 21011325;
+	//}
+//
+	//for(int i=0;i<3;i++){
+    //	
+	//	cout<<  temp.name			<<" ";
+	//	cout<<  temp.issue_limit	<<" ";
+	//	cout<<  temp.password		<<" ";
+	//	cout<<  temp.student_id		<<" ";
+	//	cout<<	endl;
+	//}
+	//for(int i=0;i<3;i++){
+    //	
+	//		//	cin >> temp.name;
+	//			temp.issue_limit	= 5+789456;
+	//			temp.password		= "ayush";
+	//			
+	//			temp.student_id	= 21011325+987654321;
+	//}
+//																											
+	//for(int i=0;i<3;i++){															
+    //											
+	//	cout<<  temp.name			<<" ";				
+	//	cout<<  temp.issue_limit	<<" ";			
+	//	cout<<  temp.password		<<" ";				
+	//	cout<<  temp.student_id		<<" ";				
+	//	cout<<	endl;							
+	//}											
+	//system("COLOR 1F");						
+	//cout<<"\n\n\n\t\t\t Hello World";			
+	//   getch();
+    system("COLOR F0");
+	Sleep(500);
+    HANDLE col;
+    col =  GetStdHandle(STD_OUTPUT_HANDLE);
+																		//	Color id	Color	Color id	Color				
+																														//	1	Blue	9	Light Blue										
+																		//	2	Green	0	Black											
+																		//	3	Aqua	A	Light Green												
+																														//	4	Red		B	Light Aqua										
+																														//	5	Purple	C	Light Red							
+																		//	6	Yellow	D	Light Purple				
+																		//	7	White	E	Light Yellow								
+																		//	8	Gray	F	Bright White						
+    for (int col_code = 1; col_code < 9; col_code++) {																				
+			string str= "COLOR F"+col_code;											
+        	system( "COLOR F1");//blue
+			system( "COLOR F4");//red
+		//	Sleep(500);																	
+																	
+        cout << col_code << "Welcome to CodeSpeedy!\n ";																	
+    }
+        	system( "COLOR F4");//red
+		cout<<"hello";
+	getch();
+    return 0;
+
 }
