@@ -6,84 +6,35 @@
                                                                /____/                               /____/   
 
 ==========================================================================================================================================================================
-DATE: 14/07/2023 TIME: 17:30:47	ayush master key logged in to the system    Admin  ID  : 1
-DATE: 14/07/2023 TIME: 17:31:16	ayush master key logged out from the system 	Admin ID : 1
+DATE: 15/07/2023 TIME: 01:13:34	Vedant Trivedi logged in to the system 	Student ID : 2118441
+DATE: 15/07/2023 TIME: 01:13:53	Pro TypeScript issued by the user	book ID : 987517
+DATE: 15/07/2023 TIME: 01:14:17	Vedant Trivedi logged out from the system 	student ID : 2118441
 ==========================================================================================================================================================================
-DATE: 14/07/2023 TIME: 17:53:34	ayush master key logged in to the system 	Student ID : 1
-DATE: 14/07/2023 TIME: 17:53:58	Software Project Management issued by the user		book ID : 987489
-DATE: 14/07/2023 TIME: 17:54:14	ayush master key logged out from the system 	student ID : 1
+DATE: 15/07/2023 TIME: 01:14:42	ayush master logged in to the system    Admin  ID  : 2118420
+DATE: 15/07/2023 TIME: 01:15:30			 New Admin Registered to the system :
+DATE: 15/07/2023 TIME: 01:15:30	New Admin name : shree krishna yadav New Admin ID :2118421
+DATE: 15/07/2023 TIME: 01:15:30	Admin Added by Admin id :2118420
+DATE: 15/07/2023 TIME: 01:15:30	2118420 logged out from the system for security purposes 
 ==========================================================================================================================================================================
-DATE: 14/07/2023 TIME: 17:54:18	ayush master key logged in to the system    Admin  ID  : 1
-DATE: 14/07/2023 TIME: 17:54:24	ayush master key accessed log history 		 Admin ID : 1
-DATE: 14/07/2023 TIME: 18:00:05	ayush master key logged out from the system 	Admin ID : 1
+DATE: 15/07/2023 TIME: 01:15:52	shree krishna yadav logged in to the system    Admin  ID  : 2118421
+DATE: 15/07/2023 TIME: 01:16:11	aa Book Registered to the system from Admin ID :2118421Book ID :1
+DATE: 15/07/2023 TIME: 01:17:02	shree krishna yadav accessed log history 		 Admin ID : 2118421
+DATE: 15/07/2023 TIME: 01:17:17	shree krishna yadav Performed book availability reset 
+DATE: 15/07/2023 TIME: 01:17:17	Book resetted with Admin ID :2118421
+DATE: 15/07/2023 TIME: 01:17:21	shree krishna yadav logged out from the system 	Admin ID : 2118421
 ==========================================================================================================================================================================
-DATE: 14/07/2023 TIME: 19:43:46	ayush master key logged in to the system 	Student ID : 1
-DATE: 14/07/2023 TIME: 19:44:01	Computer Program Analysis issued by the user		book ID : 987488
-DATE: 14/07/2023 TIME: 19:44:04	ayush master key logged out from the system 	student ID : 1
+DATE: 15/07/2023 TIME: 13:06:28	ayush saklani Registered to the system with student ID :2118499
 ==========================================================================================================================================================================
-DATE: 14/07/2023 TIME: 19:45:13	ayush master key logged in to the system 	Student ID : 1
-DATE: 14/07/2023 TIME: 19:45:33	Machine Learning issued by the user		book ID : 987487
-DATE: 14/07/2023 TIME: 19:45:42	ayush master key logged out from the system 	student ID : 1
+DATE: 15/07/2023 TIME: 13:06:51	ayush saklani logged in to the system 	Student ID : 2118420
+DATE: 15/07/2023 TIME: 13:07:21	Pro TypeScript issued by the user	book ID : 987517
+DATE: 15/07/2023 TIME: 13:07:51	Pro TypeScript returned by the user		book ID : 987517
+DATE: 15/07/2023 TIME: 13:08:17	ayush saklani Password change successfully!!   	Student ID : 2118420
+DATE: 15/07/2023 TIME: 13:08:28	ayush saklani logged out from the system 	student ID : 2118420
 ==========================================================================================================================================================================
-DATE: 14/07/2023 TIME: 19:46:34	ayush master key logged in to the system 	Student ID : 1
-DATE: 14/07/2023 TIME: 19:46:52	Theory of Computation issued by the user		book ID : 987486
-DATE: 14/07/2023 TIME: 19:47:40	ayush master key logged in to the system 	Student ID : 1
-DATE: 14/07/2023 TIME: 19:47:47	Soft Skills masterbook issued by the user		book ID : 987485
-DATE: 14/07/2023 TIME: 19:48:02	ayush master key logged out from the system 	student ID : 1
+DATE: 15/07/2023 TIME: 13:08:55	ayush saklani logged in to the system    Admin  ID  : 3218420
+DATE: 15/07/2023 TIME: 13:09:27	ayush saklani accessed log history 		 Admin ID : 3218420
+DATE: 15/07/2023 TIME: 13:09:37	ayush saklani logged out from the system 	Admin ID : 3218420
 ==========================================================================================================================================================================
-DATE: 14/07/2023 TIME: 19:49:18	ayush master key logged in to the system 	Student ID : 1
-DATE: 14/07/2023 TIME: 19:51:07	ayush master key logged in to the system    Admin  ID  : 1
-DATE: 14/07/2023 TIME: 19:51:25	ayush master key Performed book availability reset 
-DATE: 14/07/2023 TIME: 19:51:25	Book resetted with Admin ID :1
-DATE: 14/07/2023 TIME: 19:51:40	ayush master key logged out from the system 	Admin ID : 1
-==========================================================================================================================================================================
-DATE: 14/07/2023 TIME: 19:52:13	ayush master key logged in to the system 	Student ID : 1
-DATE: 14/07/2023 TIME: 19:52:20	Software Project Management issued by the user		book ID : 987489
-DATE: 14/07/2023 TIME: 19:52:27	ayush master key logged out from the system 	student ID : 1
-==========================================================================================================================================================================
-DATE: 14/07/2023 TIME: 19:53:11	ayush master key logged in to the system 	Student ID : 1
-DATE: 14/07/2023 TIME: 19:53:16	Computer Program Analysis issued by the user		book ID : 987488
-DATE: 14/07/2023 TIME: 19:53:27	Computer Program Analysis returned by the user		book ID : 987488
-DATE: 14/07/2023 TIME: 19:53:36	Software Project Management returned by the user		book ID : 987489
-DATE: 14/07/2023 TIME: 19:54:15	ayush master key logged out from the system 	student ID : 1
-==========================================================================================================================================================================
-DATE: 14/07/2023 TIME: 20:00:37	ayush master key logged in to the system 	Student ID : 1
-DATE: 14/07/2023 TIME: 20:00:52	Software Project Management issued by the user		book ID : 987489
-DATE: 14/07/2023 TIME: 20:01:15	Software Project Management returned by the user		book ID : 987489
-DATE: 14/07/2023 TIME: 20:01:18	ayush master key logged out from the system 	student ID : 1
-==========================================================================================================================================================================
-DATE: 14/07/2023 TIME: 20:01:28	ayush master key logged in to the system    Admin  ID  : 1
-DATE: 14/07/2023 TIME: 20:01:54	ayush master key accessed log history 		 Admin ID : 1
-DATE: 14/07/2023 TIME: 20:02:19	ayush master key logged out from the system 	Admin ID : 1
-==========================================================================================================================================================================
-DATE: 14/07/2023 TIME: 23:10:35	ayush master key logged in to the system 	Student ID : 1
-DATE: 14/07/2023 TIME: 23:10:43	Software Project Management issued by the user		book ID : 987489
-DATE: 14/07/2023 TIME: 23:10:51	Software Project Management returned by the user		book ID : 987489
-DATE: 14/07/2023 TIME: 23:11:12	ayush master key logged out from the system 	student ID : 1
-==========================================================================================================================================================================
-DATE: 14/07/2023 TIME: 23:34:06	ayush master key logged in to the system 	Student ID : 1
-DATE: 14/07/2023 TIME: 23:34:14	Software Project Management issued by the user		book ID : 987489
-DATE: 14/07/2023 TIME: 23:34:33	Software Project Management returned by the user		book ID : 987489
-DATE: 14/07/2023 TIME: 23:34:45	ayush master key Password change attempt failed!! 	Student ID : 1
-DATE: 14/07/2023 TIME: 23:35:06	ayush master key Password change successfully!!   	Student ID : 1
-DATE: 14/07/2023 TIME: 23:35:18	ayush master key logged out from the system 	student ID : 1
-==========================================================================================================================================================================
-DATE: 14/07/2023 TIME: 23:35:22	ayush master key logged in to the system    Admin  ID  : 1
-DATE: 14/07/2023 TIME: 23:35:33			 New Admin Registered to the system :
-DATE: 14/07/2023 TIME: 23:35:33	New Admin name : aa1 New Admin ID :11
-DATE: 14/07/2023 TIME: 23:35:33	Admin Added by Admin id :1
-DATE: 14/07/2023 TIME: 23:35:33	1 logged out from the system for security purposes 
-==========================================================================================================================================================================
-DATE: 14/07/2023 TIME: 23:35:40	ayush master key logged in to the system    Admin  ID  : 1
-DATE: 14/07/2023 TIME: 23:35:51	ads Book Registered to the system from Admin ID :1Book ID :65
-DATE: 14/07/2023 TIME: 23:36:01	ads Book deleted from the system from Admin ID :1Book ID :65
-DATE: 14/07/2023 TIME: 23:36:15	ayush master key Performed book availability reset 
-DATE: 14/07/2023 TIME: 23:36:15	Book resetted with Admin ID :1
-DATE: 14/07/2023 TIME: 23:36:21	ayush master key accessed log history 		 Admin ID : 1
-DATE: 14/07/2023 TIME: 23:36:55	ayush master key logged out from the system 	Admin ID : 1
-==========================================================================================================================================================================
-DATE: 14/07/2023 TIME: 23:39:37	ayush master key logged in to the system 	Student ID : 1
-DATE: 14/07/2023 TIME: 23:39:45	Software Project Management issued by the user		book ID : 987489
-DATE: 14/07/2023 TIME: 23:40:52	ayush master key logged in to the system 	Student ID : 1
-DATE: 14/07/2023 TIME: 23:40:57	ayush master key logged out from the system 	student ID : 1
+DATE: 26/07/2023 TIME: 00:55:29	ayush master key logged in to the system 	Student ID : 1
+DATE: 26/07/2023 TIME: 00:55:37	ayush master key logged out from the system 	student ID : 1
 ==========================================================================================================================================================================

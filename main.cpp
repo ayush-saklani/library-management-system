@@ -383,7 +383,7 @@ void book_issue(int studentid,int i){
 	    			cout<<"\t  \t\t\t";
 						ofstream log;
 						log.open("logfile.txt",ios::app);
-						log<<dateret()<<"\t"<<book[j].name<<" issued by the user\t\tbook ID : "<<book[j].book_id <<endl;
+						log<<dateret()<<"\t"<<book[j].name<<" issued by the user\tbook ID : "<<book[j].book_id <<endl;
 						log.close();
 					
 	    			getch();
@@ -667,7 +667,9 @@ void add_new_student (){
 	system("cls");
     student_corner();	
 }
-
+void admin_login(){
+	
+}
 void admin_login(){
 	system("cls");
 	art();
@@ -874,7 +876,7 @@ void add_new_admin(int adminid){
 	cout << "\n\t  \t\t\t\tPlease enter Name : ";
 	getline(cin, temp.name); 
 	cout << "\n\t  \t\t\t\tPlease enter Password : ";
-	cin >> temp.password;
+	std::cin >> temp.password;
 	admin.push_back(temp);
 	
 	system("cls");
