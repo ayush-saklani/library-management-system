@@ -1,4 +1,4 @@
-# **Library Management System (LMS)**  <img src="screenshot\logo.png" width="65" height="65" align="left"/>
+# **Library Management System (LMS)**  <img src="Readme Media\logo.png" width="65" height="65" align="left"/>
 
 Welcome to the Library Management System (LMS) repository! This is a C++ program designed to manage library operations such as book issuance, returns, student and admin login, book management, and more.
 
@@ -28,41 +28,41 @@ Welcome to the Library Management System (LMS) repository! This is a C++ program
 6. `ID : 1 Password : 2` master key for admin portal.
 
 
-## Screenshots
-<img width="600" title="" alt="1_loading_screen" src="screenshot\1_loading_screen.png">
+## Readme Medias
+<img width="600" title="" alt="1_loading_screen" src="Readme Media\1_loading_screen.png">
 
 ###### *Figure 1 : Loading Screen*
-<img width="600" title="" alt="2_welcome_screen" src="screenshot\2_welcome_screen.png">
+<img width="600" title="" alt="2_welcome_screen" src="Readme Media\2_welcome_screen.png">
 
 ###### *Figure 2: Welcome Screen*
-<img width="600" title="" alt="3_main_menu" src="screenshot\3_main_menu.png">
+<img width="600" title="" alt="3_main_menu" src="Readme Media\3_main_menu.png">
 
 ###### *Figure 3: Main Menu*
-<img width="600" title="" alt="4_student_portal" src="screenshot\4_student_portal.png">
+<img width="600" title="" alt="4_student_portal" src="Readme Media\4_student_portal.png">
 
 ###### *Figure 4: Students Portal Login *
-<img width="600" title="" alt="5_student_login" src="screenshot\5_student_login.png">
+<img width="600" title="" alt="5_student_login" src="Readme Media\5_student_login.png">
 
 ###### *Figure 5: Students Portal Login Cleared*
-<img width="600" title="" alt="6.0_student_book_list" src="screenshot\6.0_student_book_list.png">
+<img width="600" title="" alt="6.0_student_book_list" src="Readme Media\6.0_student_book_list.png">
 
 ###### *Figure 6.0: Book List accessed from Students Portal*
-<img width="600" title="" alt="6.1_book_error" src="screenshot\6.1_book_error.png">
+<img width="600" title="" alt="6.1_book_error" src="Readme Media\6.1_book_error.png">
 
 ###### *Figure 6.1: Error  Message when book is not available*
-<img width="600" title="" alt="7.0_admin_login" src="screenshot\7.0_admin_login.png">
+<img width="600" title="" alt="7.0_admin_login" src="Readme Media\7.0_admin_login.png">
 
 ###### *Figure 7.0: Admin Portal Login Page*
-<img width="600" title="" alt="7.1_admin_login" src="screenshot\7.1_admin_login.png">
+<img width="600" title="" alt="7.1_admin_login" src="Readme Media\7.1_admin_login.png">
 
 ###### *Figure 7.1: Admin Portal Login Cleared*
-<img width="600" title="" alt="8_Admin_portal" src="screenshot\8_Admin_portal.png">
+<img width="600" title="" alt="8_Admin_portal" src="Readme Media\8_Admin_portal.png">
 
 ###### *Figure 8: Admin Portal*
-<img width="600" title="" alt="9_admin_logs" src="screenshot\9_admin_logs.png">
+<img width="600" title="" alt="9_admin_logs" src="Readme Media\9_admin_logs.png">
 
 ###### *Figure 9: Logs access from Admin Portal*
-<img width="600" title="" alt="10_exit_screen" src="screenshot\10_exit_screen.png">
+<img width="600" title="" alt="10_exit_screen" src="Readme Media\10_exit_screen.png">
 
 ###### *Figure 10: Exit Screen*
 
