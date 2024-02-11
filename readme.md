@@ -46,15 +46,3 @@ Contributions are welcome! If you'd like to contribute to the project, please fo
 
 - ASCII Art: ASCII art files for welcome, exit, and company logo were sourced from external libraries.
 - C++ Libraries: Various C++ libraries such as `<iostream>`, `<fstream>`, `<windows.h>`, etc., were used for implementing functionality.
-![alt text](2_welcome_screen.png) 
-![alt text](3_main_menu.png) 
-![alt text](4_student_portal.png) 
-![alt text](5_student_login.png) 
-![alt text](6.0_student_book_list.png)  
-![alt text](6.1_book_error.png)  
-![alt text](7.0_admin_login.png)
-![alt text](7.1_admin_login.png)
-![alt text](8_Admin_portal.png) 
-![alt text](9_admin_logs.png) 
-![alt text](10_exit_screen.png) 
-![alt text](1_loading_screen.png)
