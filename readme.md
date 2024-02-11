@@ -11,7 +11,7 @@ Welcome to the Library Management System (LMS) repository! This is a C++ program
 - **Date and Time Display:** Displays current date and time for reference.
 - **Logs maintainence:** all the students activities and admin activities are stored in log file.
 
-# **Coding Language Used**
+## **Coding Language Used**
 <p align="left">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" width="60" height="60"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" width="60" height="60"/>
@@ -30,19 +30,41 @@ Welcome to the Library Management System (LMS) repository! This is a C++ program
 
 ## Screenshots
 <img width="600" title="" alt="1_loading_screen" src="screenshot\1_loading_screen.png">
+
+###### *Figure 1 : Loading Screen*
 <img width="600" title="" alt="2_welcome_screen" src="screenshot\2_welcome_screen.png">
+
+###### *Figure 2: Welcome Screen*
 <img width="600" title="" alt="3_main_menu" src="screenshot\3_main_menu.png">
+
+###### *Figure 3: Main Menu*
 <img width="600" title="" alt="4_student_portal" src="screenshot\4_student_portal.png">
+
+###### *Figure 4: Students Portal Login *
 <img width="600" title="" alt="5_student_login" src="screenshot\5_student_login.png">
+
+###### *Figure 5: Students Portal Login Cleared*
 <img width="600" title="" alt="6.0_student_book_list" src="screenshot\6.0_student_book_list.png">
+
+###### *Figure 6.0: Book List accessed from Students Portal*
 <img width="600" title="" alt="6.1_book_error" src="screenshot\6.1_book_error.png">
+
+###### *Figure 6.1: Error  Message when book is not available*
 <img width="600" title="" alt="7.0_admin_login" src="screenshot\7.0_admin_login.png">
+
+###### *Figure 7.0: Admin Portal Login Page*
 <img width="600" title="" alt="7.1_admin_login" src="screenshot\7.1_admin_login.png">
+
+###### *Figure 7.1: Admin Portal Login Cleared*
 <img width="600" title="" alt="8_Admin_portal" src="screenshot\8_Admin_portal.png">
+
+###### *Figure 8: Admin Portal*
 <img width="600" title="" alt="9_admin_logs" src="screenshot\9_admin_logs.png">
+
+###### *Figure 9: Logs access from Admin Portal*
 <img width="600" title="" alt="10_exit_screen" src="screenshot\10_exit_screen.png">
 
-*Figure 2: Admin Portal for managing books and students*
+###### *Figure 10: Exit Screen*
 
 ## Contributing
 
