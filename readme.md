@@ -72,9 +72,4 @@ Although this is a very basic C++ project but it has a very deep understading of
 
 Therefore Contributions are welcome! If you'd like to contribute to the project, please fork the repository, make your changes, and submit a pull request. Ensure your code follows the existing coding style and standards.
 
-
-
-## Acknowledgements
-
-- ASCII Art: ASCII art files for welcome, exit, and company logo were sourced from external libraries.
-- C++ Libraries: Various C++ libraries such as `<iostream>`, `<fstream>`, `<windows.h>`, etc., were used for implementing functionality.
+# **Keep Coding, Keep Smiling!, Have Fun!** 💻🚀
