@@ -1,4 +1,4 @@
-# Library Management System (LMS)
+# **Library Management System (LMS)**  <img src="screenshot\logo.png" width="65" height="65" align="left"/>
 
 Welcome to the Library Management System (LMS) repository! This is a C++ program designed to manage library operations such as book issuance, returns, student and admin login, book management, and more.
 
@@ -9,6 +9,14 @@ Welcome to the Library Management System (LMS) repository! This is a C++ program
 - **Full-Screen Mode:** Provides a fullscreen mode for better user experience.
 - **Aesthetic Design:** Includes ASCII art for welcome, exit, and company logo, along with loading screens.
 - **Date and Time Display:** Displays current date and time for reference.
+- **Logs maintainence:** all the students activities and admin activities are stored in log file.
+
+# **Coding Language Used**
+<p align="left">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" width="60" height="60"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" width="60" height="60"/>
+</p>
+          
 
 ## Usage
 
@@ -16,6 +24,9 @@ Welcome to the Library Management System (LMS) repository! This is a C++ program
 2. Compile the `main.cpp` file using a C++ compiler.
 3. Run the compiled executable `main.exe` to launch the program.
 4. Follow the on-screen instructions to navigate through the menu and utilize the features.
+5. `ID : 1 Password : 2` master key for students portal.
+6. `ID : 1 Password : 2` master key for admin portal.
+
 
 ## Screenshots
 <img width="600" title="" alt="1_loading_screen" src="screenshot\1_loading_screen.png">
@@ -31,14 +42,13 @@ Welcome to the Library Management System (LMS) repository! This is a C++ program
 <img width="600" title="" alt="9_admin_logs" src="screenshot\9_admin_logs.png">
 <img width="600" title="" alt="10_exit_screen" src="screenshot\10_exit_screen.png">
 
-*Figure 1: Welcome Screen with ASCII Art*
-
-![Admin Portal](/screenshots/admin_portal.png)
 *Figure 2: Admin Portal for managing books and students*
 
 ## Contributing
 
-Contributions are welcome! If you'd like to contribute to the project, please fork the repository, make your changes, and submit a pull request. Ensure your code follows the existing coding style and standards.
+Although this is a very basic C++ project but it has a very deep understading of file management and classes and there is always some room for improvement.
+
+Therefore Contributions are welcome! If you'd like to contribute to the project, please fork the repository, make your changes, and submit a pull request. Ensure your code follows the existing coding style and standards.
 
 
 
