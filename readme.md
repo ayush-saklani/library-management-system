@@ -40,7 +40,7 @@ Welcome to the Library Management System (LMS) repository! This is a C++ program
 ###### *Figure 3: Main Menu*
 <img width="600" title="" alt="4_student_portal" src="Readme Media\4_student_portal.png">
 
-###### *Figure 4: Students Portal Login *
+###### *Figure 4: Students Portal Login*
 <img width="600" title="" alt="5_student_login" src="Readme Media\5_student_login.png">
 
 ###### *Figure 5: Students Portal Login Cleared*
