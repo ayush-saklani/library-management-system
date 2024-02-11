@@ -11,7 +11,7 @@ Welcome to the Library Management System (LMS) repository! This is a C++ program
 - **Date and Time Display:** Displays current date and time for reference.
 - **Logs maintainence:** all the students activities and admin activities are stored in log file.
 
-## **Coding Language Used**
+## Coding Language Used
 <p align="left">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" width="60" height="60"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" width="60" height="60"/>
