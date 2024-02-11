@@ -43,8 +43,3 @@ DATE: 11/02/2024 TIME: 11:50:15	2 Registered to the system with student ID :2
 DATE: 11/02/2024 TIME: 11:50:21	2 logged in to the system 	Student ID : 2
 DATE: 11/02/2024 TIME: 11:51:08	2 logged out from the system 	student ID : 2
 ==========================================================================================================================================================================
-DATE: 11/02/2024 TIME: 12:16:33	ayush master key logged in to the system 	Student ID : 1
-DATE: 11/02/2024 TIME: 12:19:13	ayush saklani logged in to the system    Admin  ID  : 3218420
-DATE: 11/02/2024 TIME: 12:19:32	ayush saklani accessed log history 		 Admin ID : 3218420
-DATE: 11/02/2024 TIME: 12:19:48	ayush saklani logged out from the system 	Admin ID : 3218420
-==========================================================================================================================================================================
