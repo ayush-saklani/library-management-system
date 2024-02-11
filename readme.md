@@ -28,7 +28,7 @@ Welcome to the Library Management System (LMS) repository! This is a C++ program
 6. `ID : 1 Password : 2` master key for admin portal.
 
 
-## Readme Medias
+## Screenshot
 <img width="600" title="" alt="1_loading_screen" src="Readme Media\1_loading_screen.png">
 
 ###### *Figure 1 : Loading Screen*
